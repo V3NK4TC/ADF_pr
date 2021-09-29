@@ -1,6 +1,0 @@
-selected resource name:		CasesNdeathsTransformation
-selected resource type:		dataflow
-factory name:			CovidReporting-DataFactory
-factory location:		eastus
-subscription id:		27cf186c-67d0-4b01-b61d-26a5e0425fa0
-time of download (UTC):		Thu, 23 Sep 2021 06:45:29 GMT
