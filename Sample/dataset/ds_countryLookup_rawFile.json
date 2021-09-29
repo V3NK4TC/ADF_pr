@@ -1,0 +1,47 @@
+{
+	"name": "ds_countryLookup_rawFile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_countryLookup_raw",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "cases And deaths data"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "country_lookup.csv",
+				"container": "lokupdatacountires"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "country",
+				"type": "String"
+			},
+			{
+				"name": "country_code_2_digit",
+				"type": "String"
+			},
+			{
+				"name": "country_code_3_digit",
+				"type": "String"
+			},
+			{
+				"name": "continent",
+				"type": "String"
+			},
+			{
+				"name": "population",
+				"type": "String"
+			}
+		]
+	}
+}
