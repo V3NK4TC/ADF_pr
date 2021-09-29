@@ -1,0 +1,26 @@
+{
+	"name": "ds_processed_casesNdeaths",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_processed_casesNdeaths",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "cases And deaths data"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "ECDC/CasesNdeaths",
+				"fileSystem": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
