@@ -1,0 +1,22 @@
+{
+    "now": "2021-09-23T06:45:29.120Z",
+    "perfNow": 684312,
+    "diagnosticCorrelation": "da07080d-657b-4452-91a6-860c0677de44",
+    "source": "DownloadSupportFiles",
+    "environment": {
+        "productName": "adf",
+        "buildVersion": "1.0.20210916.8",
+        "environmentType": 3,
+        "resourceName": "CovidReporting-DataFactory",
+        "resourceRegion": "eastus",
+        "resourceGroup": "Covid_Project_rg",
+        "subscriptionId": "27cf186c-67d0-4b01-b61d-26a5e0425fa0",
+        "sessionId": "TqR0d",
+        "operationId": "W6lKD",
+        "gitType": "live"
+    },
+    "additionalInfo": {
+        "selectedResource": "CasesNdeathsTransformation",
+        "selectedResourceType": "dataflow"
+    }
+}
