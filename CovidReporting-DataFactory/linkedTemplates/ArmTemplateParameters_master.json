@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "CovidReporting-DataFactory"
+		},
+		"ls_Ecdc_casesNdeaths_rawfile_connectionString": {
+			"value": ""
+		},
+		"ls_countryLookup_raw_connectionString": {
+			"value": ""
+		},
+		"ls_processed_casesNdeaths_accountKey": {
+			"value": ""
+		},
+		"ls_processed_casesNdeaths_properties_typeProperties_url": {
+			"value": "https://covidreporting001dl.dfs.core.windows.net"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

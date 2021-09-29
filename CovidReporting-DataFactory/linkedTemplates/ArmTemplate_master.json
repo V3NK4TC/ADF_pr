@@ -1,0 +1,70 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "CovidReporting-DataFactory"
+		},
+		"ls_Ecdc_casesNdeaths_rawfile_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_Ecdc_casesNdeaths_rawfile'"
+		},
+		"ls_countryLookup_raw_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_countryLookup_raw'"
+		},
+		"ls_processed_casesNdeaths_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_processed_casesNdeaths'"
+		},
+		"ls_processed_casesNdeaths_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://covidreporting001dl.dfs.core.windows.net"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "CovidReporting-DataFactory_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_Ecdc_casesNdeaths_rawfile_connectionString": {
+						"value": "[parameters('ls_Ecdc_casesNdeaths_rawfile_connectionString')]"
+					},
+					"ls_countryLookup_raw_connectionString": {
+						"value": "[parameters('ls_countryLookup_raw_connectionString')]"
+					},
+					"ls_processed_casesNdeaths_accountKey": {
+						"value": "[parameters('ls_processed_casesNdeaths_accountKey')]"
+					},
+					"ls_processed_casesNdeaths_properties_typeProperties_url": {
+						"value": "[parameters('ls_processed_casesNdeaths_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
