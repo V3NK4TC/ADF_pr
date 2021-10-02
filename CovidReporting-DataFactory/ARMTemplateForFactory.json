@@ -450,7 +450,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"folderPath": "ECDC/HospAndAdmissions",
+						"folderPath": "ECDC/HospAndAdmissions_daily",
 						"fileSystem": "raw"
 					},
 					"columnDelimiter": ",",
@@ -638,7 +638,7 @@
 					"sinks": [
 						{
 							"dataset": {
-								"referenceName": "ds_processed_hospitals_and_admissions_data",
+								"referenceName": "ds_processed_hospitals_and_admissions_weekly",
 								"type": "DatasetReference"
 							},
 							"name": "WeeklyDataFinal"
@@ -693,7 +693,39 @@
 				"[concat(variables('factoryId'), '/datasets/ds_hospital_admission_data')]",
 				"[concat(variables('factoryId'), '/datasets/ds_countryLookup_rawFile')]",
 				"[concat(variables('factoryId'), '/datasets/ds_dimdate_file')]",
+				"[concat(variables('factoryId'), '/datasets/ds_processed_hospitals_and_admissions_weekly')]",
 				"[concat(variables('factoryId'), '/datasets/ds_processed_hospitals_and_admissions_data')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_processed_hospitals_and_admissions_weekly')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_processed_hospitalAdmissions_data",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "Hospital and Admissions datasets"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"folderPath": "ECDC/HospAndAdmissions_weekly",
+						"fileSystem": "raw"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_processed_hospitalAdmissions_data')]"
 			]
 		}
 	]
