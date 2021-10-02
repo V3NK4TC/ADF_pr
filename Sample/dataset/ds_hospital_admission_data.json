@@ -1,0 +1,55 @@
+{
+	"name": "ds_hospital_admission_data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Ecdc_hospitalAdmissiondata_raw",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Hospital and Admissions datasets"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "hospital_admissions.csv",
+				"container": "ecdcdata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "country",
+				"type": "String"
+			},
+			{
+				"name": "indicator",
+				"type": "String"
+			},
+			{
+				"name": "date",
+				"type": "String"
+			},
+			{
+				"name": "year_week",
+				"type": "String"
+			},
+			{
+				"name": "value",
+				"type": "String"
+			},
+			{
+				"name": "source",
+				"type": "String"
+			},
+			{
+				"name": "url",
+				"type": "String"
+			}
+		]
+	}
+}

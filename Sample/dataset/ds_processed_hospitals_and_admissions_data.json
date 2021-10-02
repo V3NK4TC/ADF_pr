@@ -1,0 +1,26 @@
+{
+	"name": "ds_processed_hospitals_and_admissions_data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_processed_hospitalAdmissions_data",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Hospital and Admissions datasets"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "ECDC/HospAndAdmissions",
+				"fileSystem": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
