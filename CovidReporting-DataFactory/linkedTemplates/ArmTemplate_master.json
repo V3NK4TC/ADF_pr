@@ -11,15 +11,31 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_Ecdc_casesNdeaths_rawfile'"
 		},
+		"ls_Ecdc_hospitalAdmissiondata_raw_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_Ecdc_hospitalAdmissiondata_raw'"
+		},
 		"ls_countryLookup_raw_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_countryLookup_raw'"
+		},
+		"ls_dimdate_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_dimdate'"
 		},
 		"ls_processed_casesNdeaths_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_processed_casesNdeaths'"
 		},
+		"ls_processed_hospitalAdmissions_data_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_processed_hospitalAdmissions_data'"
+		},
 		"ls_processed_casesNdeaths_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://covidreporting001dl.dfs.core.windows.net"
+		},
+		"ls_processed_hospitalAdmissions_data_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://covidreporting001dl.dfs.core.windows.net"
 		},
@@ -53,14 +69,26 @@
 					"ls_Ecdc_casesNdeaths_rawfile_connectionString": {
 						"value": "[parameters('ls_Ecdc_casesNdeaths_rawfile_connectionString')]"
 					},
+					"ls_Ecdc_hospitalAdmissiondata_raw_connectionString": {
+						"value": "[parameters('ls_Ecdc_hospitalAdmissiondata_raw_connectionString')]"
+					},
 					"ls_countryLookup_raw_connectionString": {
 						"value": "[parameters('ls_countryLookup_raw_connectionString')]"
+					},
+					"ls_dimdate_connectionString": {
+						"value": "[parameters('ls_dimdate_connectionString')]"
 					},
 					"ls_processed_casesNdeaths_accountKey": {
 						"value": "[parameters('ls_processed_casesNdeaths_accountKey')]"
 					},
+					"ls_processed_hospitalAdmissions_data_accountKey": {
+						"value": "[parameters('ls_processed_hospitalAdmissions_data_accountKey')]"
+					},
 					"ls_processed_casesNdeaths_properties_typeProperties_url": {
 						"value": "[parameters('ls_processed_casesNdeaths_properties_typeProperties_url')]"
+					},
+					"ls_processed_hospitalAdmissions_data_properties_typeProperties_url": {
+						"value": "[parameters('ls_processed_hospitalAdmissions_data_properties_typeProperties_url')]"
 					}
 				}
 			},

@@ -8,13 +8,25 @@
 		"ls_Ecdc_casesNdeaths_rawfile_connectionString": {
 			"value": ""
 		},
+		"ls_Ecdc_hospitalAdmissiondata_raw_connectionString": {
+			"value": ""
+		},
 		"ls_countryLookup_raw_connectionString": {
+			"value": ""
+		},
+		"ls_dimdate_connectionString": {
 			"value": ""
 		},
 		"ls_processed_casesNdeaths_accountKey": {
 			"value": ""
 		},
+		"ls_processed_hospitalAdmissions_data_accountKey": {
+			"value": ""
+		},
 		"ls_processed_casesNdeaths_properties_typeProperties_url": {
+			"value": "https://covidreporting001dl.dfs.core.windows.net"
+		},
+		"ls_processed_hospitalAdmissions_data_properties_typeProperties_url": {
 			"value": "https://covidreporting001dl.dfs.core.windows.net"
 		}
 	}
