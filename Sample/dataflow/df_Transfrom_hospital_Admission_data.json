@@ -29,7 +29,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "ds_processed_hospitals_and_admissions_data",
+						"referenceName": "ds_processed_hospitals_and_admissions_weekly",
 						"type": "DatasetReference"
 					},
 					"name": "WeeklyDataFinal"
